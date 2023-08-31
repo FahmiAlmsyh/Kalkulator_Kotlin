@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Kotlin</string>
+    <string name="length">Panjang</string>
+    <string name="bonjour">Bonjour!</string>
+    <string name="width">Lebar</string>
+    <string name="height">Tinggi</string>
+    <string name="send">Send</string>
+    <string name="result_">Hasil</string>
+</resources>
