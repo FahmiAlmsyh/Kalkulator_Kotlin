@@ -6,12 +6,13 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var  edtLength     : EditText
-    private lateinit var  edtWidth      : EditText
-    private lateinit var  edtHeight     : EditText
+    private lateinit var  edtLength     : TextInputLayout
+    private lateinit var  edtWidth      : TextInputLayout
+    private lateinit var  edtHeight     : TextInputLayout
     private lateinit var  btnSend       : Button
     private lateinit var  tvResult      : TextView
 
@@ -32,9 +33,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View?) {
         if (view?.id == R.id.btn_send) {
-            val getLength = edtLength.text.toString().trim()
-            val getWidth = edtWidth.text.toString().trim()
-            val getHeight = edtHeight.text.toString().trim()
+            val getLength = edtLength.editText?.text.toString().trim()
+            val getWidth = edtWidth.editText?.text.toString().trim()
+            val getHeight = edtHeight.editText?.text.toString().trim()
             val msg = "Harus Diisi"
 
             if (getLength.isEmpty()) {
